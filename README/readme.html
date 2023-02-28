@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-02-28 二 21:10 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="author" content="jsw" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org04086f7">1. 课题研究的背景及意义</a></li>
+<li><a href="#orgac3ba33">2. 研究现状及发展趋势</a></li>
+<li><a href="#org428d04f">3. 课题研究目标及内容</a>
+<ul>
+<li><a href="#org2adb598">3.1. 系统需求</a>
+<ul>
+<li><a href="#org6fa63f5">3.1.1. 学生前端</a></li>
+<li><a href="#orga1cf123">3.1.2. 教师前端</a></li>
+<li><a href="#orga349a16">3.1.3. 管理后端</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgdcec2ba">4. 研究方案</a></li>
+<li><a href="#org9c28fed">5. 进度安排</a></li>
+<li><a href="#org92729c7">6. 完成课题所需条件</a></li>
+<li><a href="#org80c2c08">7. 存在的困难和拟解决的措施</a></li>
+<li><a href="#org6b621e1">8. 主要参考文献</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org04086f7" class="outline-2">
+<h2 id="org04086f7"><span class="section-number-2">1.</span> 课题研究的背景及意义</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>项目需求
+<ul class="org-ul">
+<li>为增强大一新生编程兴趣，提升编程能力，计算机学院每年都举行中工大一新生刷题活动，引导学生在指定网站通过刷题编程，训练编程，活动抽取参与人数的60%设置奖项，为了统计学生的刷题情况，开发一款基于web的新生在线做题管理系统。</li>
+</ul></li>
+<li>虽然计算机技术更新换代比较快，随之时间的流逝，有些技术和知识会过时，但计算机里的‘四大件’还是能使你的知识投资更稳定的.计算机组成原理，操作系统，计算机网络，数据结构与算法，这是一个软件开发工程师自我修养，这个毕业设计是针对数据结构与算法设计的一个刷题统计网站，曾经有句名言：程序=数据结构+算法，这虽然是个统计刷题的网站，当然不是为了让学第学妹们卷（我的这个也不一定会上线），有些事是需要热忱的，老师可以在上面发表一些激励,我更愿意这些激励措施是给予个人而非班级，因为这毕竟是自己的事，有些人会喜欢，而有一些则不一定，同学们自愿自由参与，这样的愿景就会比较美好了。
+<ul class="org-ul">
+<li><img src="./devel.png" alt="devel.png" /></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgac3ba33" class="outline-2">
+<h2 id="orgac3ba33"><span class="section-number-2">2.</span> 研究现状及发展趋势</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>这个项目的需求单体架构就够了，计划采用的技术也比较平庸,我希望这个项目能发展，我技术一般，但我尽力会做好这个项目，可能安全不够完善，前端不够好看，所以我将这些说明文档，sql文件等连同项目都存在github上，若这个项目有点用，也希望后面能有学弟学妹来一起完善。
+<ul class="org-ul">
+<li><a href="https://github.com/jjj81/whoami">https://github.com/jjj81/whoami</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org428d04f" class="outline-2">
+<h2 id="org428d04f"><span class="section-number-2">3.</span> 课题研究目标及内容</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org2adb598" class="outline-3">
+<h3 id="org2adb598"><span class="section-number-3">3.1.</span> 系统需求</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-org6fa63f5" class="outline-4">
+<h4 id="org6fa63f5"><span class="section-number-4">3.1.1.</span> 学生前端</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> 注册，登陆 : 学生注册或登陆，完成个人信息的增删改查
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> 个人信息:学号,姓名,班级,班级以可选表单提交</li>
+</ul></li>
+<li class="off"><code>[&#xa0;]</code> 学生刷题信息登记：刷题网站url,账号,解题数量,刷题起止日期,网站刷题情况截图
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> 固定选择几个好的刷题网站，前端直接提交表单</li>
+<li class="off"><code>[&#xa0;]</code> 最后这个表，url,账号，学号，应该都不唯一，primary key 不定，但应该不会有太大问题，应该不会涉及到连表查询，最后还要联合一下url,账号做一下去重,这个在插入数据的时候做一下查询，如果数据库中已经存在相同的url+账号，就返回一个错误或提示网页。</li>
+</ul></li>
+<li class="off"><code>[&#xa0;]</code> 学生身份,刷题信息查询:
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> 学生登陆后可查询更新在各个网站上的刷题记录情况
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> 查看个人刷题总排名</li>
+<li class="off"><code>[&#xa0;]</code> 班级排名</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga1cf123" class="outline-4">
+<h4 id="orga1cf123"><span class="section-number-4">3.1.2.</span> 教师前端</h4>
+<div class="outline-text-4" id="text-3-1-2">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> 注册 ，登陆 完成个人信息的增删改查.</li>
+<li class="off"><code>[&#xa0;]</code> 学生班级信息管理：
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> 审核（批量） //学生注册时，决定是否将其写入学生表 //这个实现我想了一个解决思路：在学生表加一个是否加入班级的bool字段，默认为false,学生端不提供接口修改该字段，教师端提供。提供一个search操作，将为false的学生列出，由老师决定是否将其加入班级。</li>
+<li class="off"><code>[&#xa0;]</code> delete and update //老师拥有对学生表的操作权限</li>
+</ul></li>
+<li class="off"><code>[&#xa0;]</code> 学生刷题信息核实，//学生那个刷题信息那个表增加一个bool字段，默认为false，若老师觉得学生提供的信息是真实的，提供一个修改字段的接口将其修改为true.</li>
+<li class="off"><code>[&#xa0;]</code> 学生刷题信息统计：查询学生在各个网站刷题情况，查看个人刷题,班级排名</li>
+<li class="off"><code>[&#xa0;]</code> 班级刷题信息统计：查询各个班级在各个网站刷题记录和总排名</li>
+<li class="off"><code>[&#xa0;]</code> 设置奖项  公式// 学生端能看到</li>
+<li class="off"><code>[&#xa0;]</code> 发布公示</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga349a16" class="outline-4">
+<h4 id="orga349a16"><span class="section-number-4">3.1.3.</span> 管理后端</h4>
+<div class="outline-text-4" id="text-3-1-3">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> 不同的刷题网站难度不一，就算是同一网站题目也分难中易，所以我认为不同的网站可以留一个权值，难度较大的网站（其实粒度下到题目更好）给予较高的权值，给出综合分。权值的设定权在管理员。</li>
+<li class="off"><code>[&#xa0;]</code> 对学生，老师数据库的管理权限</li>
+<li class="off"><code>[&#xa0;]</code> 系统数据库维护 //其实自己修改代码更容易</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgdcec2ba" class="outline-2">
+<h2 id="orgdcec2ba"><span class="section-number-2">4.</span> 研究方案</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>采用的框架: maven + sprint boot + mybatis + mysql + thymeleaf</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9c28fed" class="outline-2">
+<h2 id="org9c28fed"><span class="section-number-2">5.</span> 进度安排</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>git log</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org92729c7" class="outline-2">
+<h2 id="org92729c7"><span class="section-number-2">6.</span> 完成课题所需条件</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+热忱
+</p>
+</div>
+</div>
+<div id="outline-container-org80c2c08" class="outline-2">
+<h2 id="org80c2c08"><span class="section-number-2">7.</span> 存在的困难和拟解决的措施</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>我前端的框架不太熟，所以我直接用模板引擎thymeleaf来承担前端页面工作，</li>
+<li>图片存储的问题.每个学生都需要自己的空间存image,有两种解决方案：
+<ul class="org-ul">
+<li>直接放在本地的文件系统，但其实不太好做管理，因为毕竟不是公共的static resource</li>
+<li>将这种二进制image file ，直接往mysql里store,这个我不知道做，但我查了一下，有解决方案，应该能实现，
+<ul class="org-ul">
+<li><a href="https://www.digitalocean.com/community/tutorials/how-to-use-the-mysql-blob-data-type-to-store-images-with-php-on-ubuntu-18-04">https://www.digitalocean.com/community/tutorials/how-to-use-the-mysql-blob-data-type-to-store-images-with-php-on-ubuntu-18-04</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6b621e1" class="outline-2">
+<h2 id="org6b621e1"><span class="section-number-2">8.</span> 主要参考文献</h2>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: jsw</p>
+<p class="date">Created: 2023-02-28 二 21:10</p>
+</div>
+</body>
+</html>

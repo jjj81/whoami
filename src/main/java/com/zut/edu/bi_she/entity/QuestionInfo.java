@@ -4,12 +4,12 @@ import java.sql.Date;
 
 import lombok.Data;
 @Data
-class QuestionInfo
+public class QuestionInfo
 {
     private String url;
     private String acount;
     int solve_problem_count;
-    Date start;
-    Date end;
+    Date solve_start;
+    Date solve_end;
     //solve problem photo
 }
