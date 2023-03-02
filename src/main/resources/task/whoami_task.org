@@ -1,0 +1,8 @@
+
+
+l
+- [ ] 注册学号错误返回error page;
+- [ ] 学号格式长度限制
+** security
+- [ ] password not 明文传输
+- [ ] password 加密存贮

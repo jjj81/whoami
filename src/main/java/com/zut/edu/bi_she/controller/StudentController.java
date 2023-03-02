@@ -23,4 +23,8 @@ public class StudentController {
         studentMapper.insert(student);
     }
 
+
+
+    // repeat print error
+
 }
